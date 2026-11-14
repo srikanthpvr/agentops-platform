@@ -1,0 +1,47 @@
+# ============================================================
+# AgentOps Platform – Backend Python Dependencies
+# All versions are pinned for reproducible builds.
+# ============================================================
+
+# --- Web Framework ---
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12        # Required for form/file upload parsing
+
+# --- Database (async) ---
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0                 # Async PostgreSQL driver
+alembic==1.14.0                 # Schema migrations
+greenlet==3.1.1                 # Required by SQLAlchemy async
+
+# --- Pydantic & Settings ---
+pydantic==2.10.0
+pydantic-settings==2.6.1
+python-dotenv==1.0.1
+
+# --- Auth & Security ---
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# --- Task Queue ---
+celery[redis]==5.4.0
+redis==5.2.0
+
+# --- HTTP Client ---
+httpx==0.28.0
+
+# --- Rate Limiting ---
+slowapi==0.1.9
+
+# --- Payments ---
+stripe==11.3.0
+
+# --- PII Detection ---
+presidio-analyzer==2.2.355
+presidio-anonymizer==2.2.355
+
+# --- Testing ---
+pytest==8.3.4
+pytest-asyncio==0.24.0
+pytest-cov==6.0.0
+aiosqlite==0.20.0               # SQLite async driver for tests
